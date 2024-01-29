@@ -37,7 +37,8 @@ allprojects {
     }
 
     dependencies {
-        compileOnly("com.willfp:eco:6.56.0")
+        // compileOnly("com.willfp:eco:6.56.0")
+        compileOnly(fileTree("../../lib") { include("*.jar") })
         compileOnly("org.jetbrains:annotations:23.0.0")
         compileOnly("org.jetbrains.kotlin:kotlin-stdlib:1.9.20")
     }

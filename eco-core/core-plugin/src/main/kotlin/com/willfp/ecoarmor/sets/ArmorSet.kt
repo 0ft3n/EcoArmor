@@ -287,7 +287,7 @@ class ArmorSet(
             val lore = metaLore.map { it.replace("%tier%", Tiers.defaultTier.displayName) }
             meta.lore = lore
             formattedOut.itemMeta = meta
-            plugin.scheduler.run {
+            plugin.scheduler.runGlobally {
                 Recipes.createAndRegisterRecipe(
                     plugin,
                     id + "_" + slot.name.lowercase(Locale.getDefault()),
